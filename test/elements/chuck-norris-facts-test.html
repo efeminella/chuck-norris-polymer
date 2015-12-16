@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script src="../../bower_components/web-component-tester/browser.js"></script>
+        <link rel="import" href="../../bower_components/polymer/polymer.html">
+        <link rel="import" href="../../src/elements/chuck-norris-facts.html">
+    </head>
+    <!--
+        Implement WCT BDD tests via Chai: http://chaijs.com/
+    -->
+    <body>
+        <chuck-norris-facts id="fixture"></chuck-norris-facts>
+        <script>
+            'use strict';
+            var server;
+
+            beforeEach(function(){
+                server = sinon.fakeServer.create();
+                server.respondWith('GET', 'http://api.icndb.com/jokes/random', [
+                    200,
+                    {'Content-Type': 'application/json'},
+                    '{"joke":"Test Joke"}'
+                ]);
+            })
+            describe('<chuck-norris-facts>', function() {
+                describe('default properties', function(){
+                    var el = document.getElementById('fixture');
+                    it('fact default', function() {
+                        expect(el.fact).to.be.undefined;
+                    });
+                    it('factId default', function() {
+                        expect(el.factId).to.be.undefined;
+                    });
+                    it('firstname default', function() {
+                        expect(el.firstname).to.eql('Chuck');
+                    });
+                    it('lastname default', function() {
+                        expect(el.lastname).to.eql('Norris');
+                    });
+                    it('categories explicit default', function() {
+                        expect(el.categories.explicit).to.be.false;
+                    });
+                    it('categories nerdy default', function() {
+                        expect(el.categories.nerdy).to.be.true;
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!-- import polymer element dependencies -->
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
+
+<!-- import element class -->
+<script src="chuck-norris-facts.js" type="text/javascript"></script>
+
+<!--
+ ## Chuck Norris Facts!
+
+ The chuck-norris-facts element provides a Web Component for displaying
+ facts about Chuck Norris.
+
+ Example:
+
+        <chuck-norris-facts></chuck-norris-facts>
+
+ @demo ../dist/index.html
+ -->
+<dom-module id="chuck-norris-facts">
+    <template>
+        <!-- import fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+        <!-- define element styles -->
+        <link href='chuck-norris-facts.css' rel='stylesheet' type='text/css'>
+
+        <!-- define service api access -->
+        <iron-ajax id="service"
+                   auto
+                   url=''
+                   handle-as="json"
+                   on-response="_setFact"
+                   debounce-duration="300">
+        </iron-ajax>
+
+        <!-- define element markup and bindings -->
+        <paper-drawer-panel id="drawer">
+            <paper-header-panel drawer>
+                <paper-toolbar>
+                    <div>
+                        <span>Settings</span>
+                    </div>
+                </paper-toolbar>
+                <div class="settings">
+                    <section>
+                        <h1>Categories</h1>
+                        <paper-checkbox checked="{{categories.explicit}}">Explicit</paper-checkbox>
+                        <paper-checkbox checked="{{categories.nerdy}}">Nerdy</paper-checkbox>
+                    </section>
+                    <section>
+                        <h1>Personalize</h1>
+                        <paper-input id="first" no-label-float="true" label="Firstname"></paper-input>
+                        <paper-input id="last" no-label-float="true" label="Lastname"></paper-input>
+                    </section>
+                    <paper-toolbar class="options">
+                        <paper-button on-click="_personalize">Done</paper-button>
+                        <paper-button on-click="prompt">Reset</paper-button>
+                    </paper-toolbar>
+                    <paper-toast id="notification" text="You're Sure?" duration="0">
+                        <paper-icon-button icon="check" on-click="reset"></paper-icon-button>
+                        <paper-icon-button icon="close" on-click="cancel"></paper-icon-button>
+                    </paper-toast>
+                </div>
+            </paper-header-panel>
+            <paper-header-panel main class="container">
+                <paper-toolbar>
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div>{{firstname}} {{lastname}}, {{factId}}</div>
+                </paper-toolbar>
+                <div id="content">
+                    <paper-card class="card">
+                        <div class="card-content">
+                            <p class="quote">{{fact}}</p>
+                        </div>
+                        <div class="card-actions">
+                            <paper-icon-button on-click="_getFact" icon="refresh"></paper-icon-button>
+                        </div>
+                    </paper-card>
+                </div>
+            </paper-header-panel>
+        </paper-drawer-panel>
+    </template>
+
+    <!-- attach element class to the template -->
+    <script>
+        'use strict';
+        (function() {
+            Polymer(ChuckNorrisFacts);
+        }());
+    </script>
+</dom-module>

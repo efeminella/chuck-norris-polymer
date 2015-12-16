@@ -1,0 +1,25 @@
+{
+  "name": "chuck-norris-polymer",
+  "version": "1.0.0",
+  "description": "Chuck Norris Polymer",
+  "main": "index.html",
+  "author": "Eric J. Feminella <efeminella@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/efeminella/chuck-norris-polymer"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "del": "^2.0.2",
+    "eslint": "^1.7.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-crisper": "0.0.7",
+    "gulp-eslint": "^1.0.0",
+    "gulp-live-server": "0.0.29",
+    "gulp-uglify": "^1.4.2",
+    "gulp-vulcanize": "^6.0.1",
+    "run-sequence": "^1.1.4",
+    "web-component-tester": "^4.0.1"
+  }
+}

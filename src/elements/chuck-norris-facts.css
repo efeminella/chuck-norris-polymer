@@ -1,0 +1,47 @@
+/* define default element styles and overrides ... */
+:host {
+    font-family: 'Roboto', sans-serif;
+    --paper-card: {
+        width: 100%;
+        background-color: #F8FFC1;
+    }
+    --paper-card-content: {
+        height: 300px;
+        min-height: 300px;
+    }
+    --paper-checkbox-checked-color: #333;
+    --paper-checkbox-checked-ink-color: #333;
+    --paper-checkbox-unchecked-color: #333;
+    --paper-checkbox-unchecked-ink-color: #333;
+    --paper-checkbox-label-color: #333;
+    --paper-toolbar-background: #333333;
+}
+[drawer], .options {
+    background-color: #DCDECC;
+    color: #000;
+}
+.settings section {
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.settings section h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.quote {
+    height: 100%;
+    margin-top: 0;
+    overflow-y: auto;
+    font-family: 'Permanent Marker';
+    font-size: 24px;
+}
+paper-input {
+    margin-bottom: 10px;
+}
+paper-checkbox {
+    display: block;
+    margin: 10px 0;
+}
+paper-toast {
+    margin-left: 0;
+}
