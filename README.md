@@ -1,6 +1,6 @@
 # Chuck Norris Facts! Polymer
 
-Chuck Norris Facts, just a basic example demonstarting a few of the awesome things you can do with [Web Components](http://webcomponents.org/) and [Polymer 1.0](https://www.polymer-project.org/1.0/).
+Chuck Norris Facts, just a basic example demonstarting a few of the awesome things you can do with [Web Components](http://webcomponents.org/) and [Polymer 1.x](https://www.polymer-project.org/1.0/).
 
 [![Example](http://ericfeminella.com/blog/articles/chuck-norris-polymer/example.gif)](http://ericfeminella.com/blog/articles/chuck-norris-polymer/)
 
@@ -22,4 +22,4 @@ You're all set, you can view the app locally at [http://localhost:3000](http://l
 * Implement Iron Component Page once ES6 is supported.
 
 ### Who do I talk to?
-[Eric Feminella](mailto:efeminella@gmail.com?Subject=Polymer%20Learning)
+[Eric Feminella](mailto:efeminella@gmail.com?Subject=Chuck%20Norris%20Polymer)
