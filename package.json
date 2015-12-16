@@ -6,7 +6,7 @@
   "author": "Eric J. Feminella <efeminella@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/efeminella/chuck-norris-polymer"
+    "url": "https://github.com/efeminella/chuck-norris-polymer"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.3",

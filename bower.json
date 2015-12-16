@@ -12,7 +12,7 @@
     "polymer"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/efeminella/chuck-norris-polymer",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
