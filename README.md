@@ -11,7 +11,7 @@ Minimal project set up, just make sure you have [npm](http://blog.npmjs.org/post
 * `$ bower install` - Install bower components
 * `$ gulp` - Start things up ...
 
-You're all set, you can view the app locally at [http://localhost:3000/dist/](http://localhost:3000/dist/) and you can run the tests via `$ gulp test:local`
+You're all set, you can view the app locally at [http://localhost:3000](http://localhost:3000/dist/) and you can run the tests via `$ gulp test:local`
 
 
 ### References / Resources

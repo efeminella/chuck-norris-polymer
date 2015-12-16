@@ -80,7 +80,7 @@ gulp.task('build', function(callback){
 
 // basic live server task ...
 gulp.task('serve', function(callback) {
-    server = liveserver.static('/', 3000);
+    server = liveserver.static('/dist', 3000);
     server.start();
     callback();
 });
