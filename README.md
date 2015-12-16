@@ -1,6 +1,6 @@
 # Chuck Norris Facts! Polymer
 
-Chuck Norris Facts, a basic example demonstarting just a few of the awesome things you can do with Web Components and [Polymer 1.0](https://www.polymer-project.org/1.0/).
+Chuck Norris Facts, just a basic example demonstarting a few of the awesome things you can do with [Web Components](http://webcomponents.org/) and [Polymer 1.0](https://www.polymer-project.org/1.0/).
 
 [![Example](http://ericfeminella.com/blog/articles/chuck-norris-polymer/example.gif)](http://ericfeminella.com/blog/articles/chuck-norris-polymer/)
 
